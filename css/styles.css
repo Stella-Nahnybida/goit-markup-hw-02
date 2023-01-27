@@ -1,8 +1,116 @@
-body {
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Roboto', sans-serif;
+/* Colors */
+:root {
+    --primary-brand: #4D5AE5;
+    /* IRIS */
+    --pressed: #404BBF;
+    /* OCEAN */
+    --dark: #2E2F42;
+    /* NAVI BLUE */
+    --success: #31D0AA;
+    /* GREEN */
+    --text: #434455;
+    /* SLATE */
+    --subtle-text: #8E8F99;
+    /* LIGHT SLATE */
+    --accent: #E7E9FC;
+    /* CORNFLOWER */
+    --light: #F4F4FD;
+    /* CLOUD */
+    --modal-overlay: #2E2F42;
+    /* NAVY BLUE modal */
+    --hero-background: #2E2F42;
+    /* GREY */
+    --text-color: #ffffff;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Hidden header pattern */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+/* ----------------HEADER------------------ */
+.header {
+
+}
+
+/* Site Logo */
 .logo {
     font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-brand);
+}
+
+/*
+.logo-web {}
+*/
+
+.header .logo-studio {
+    color: var(--dark);
+}
+
+/* Site Navigation */
+.nav {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.current {
+    color: var(--accent);
+}
+
+/* ----------------MAIN------------------ */
+.hero {
+    background: var(--hero-background);
+    color: var(--text-color)
+}
+
+.hero-title {
+    font-size: ;
+    font-weight: ;
+}
+
+/* Hero Button */
+.hero-button {
+    font-family: inherit;
+    background: var(--primary-brand);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background: var(--pressed);
+}
+
+/* ----------------FOOTER------------------ */
+.footer {
+    background-color: ;
+    color: ;
+}
+
+.footer .logo-studio {
+    color: var(--light);
 }
