@@ -1,32 +1,33 @@
 /* Colors */
 :root {
-    --primary-brand: #4D5AE5;
     /* IRIS */
-    --pressed: #404BBF;
+    --primary-brand: #4D5AE5;
     /* OCEAN */
-    --dark: #2E2F42;
+    --pressed: #404BBF;
     /* NAVI BLUE */
-    --success: #31D0AA;
+    --dark: #2E2F42;
     /* GREEN */
-    --text: #434455;
+    --success: #31D0AA;
     /* SLATE */
-    --subtle-text: #8E8F99;
+    --text: #434455;
     /* LIGHT SLATE */
-    --accent: #E7E9FC;
+    --subtle-text: #8E8F99;
     /* CORNFLOWER */
-    --light: #F4F4FD;
+    --accent: #E7E9FC;
     /* CLOUD */
-    --modal-overlay: #2E2F42;
+    --light: #F4F4FD;
     /* NAVY BLUE modal */
-    --hero-background: #2E2F42;
+    --modal-overlay: #2E2F42;
     /* GREY */
-    --text-color: #ffffff;
+    --hero-background: #2E2F42;
+    /* WHITE */
+    --slogan-color: #ffffff;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--text);
-    background-color: #ffffff;
+    color: var(--subtle-text);
+    /*background-color: #ffffff;*/
 }
 
 a {
@@ -48,9 +49,7 @@ a {
 }
 
 /* ----------------HEADER------------------ */
-.header {
-
-}
+.header {}
 
 /* Site Logo */
 .logo {
@@ -63,35 +62,56 @@ a {
     color: var(--primary-brand);
 }
 
-/*
-.logo-web {}
-*/
-
 .header .logo-studio {
     color: var(--dark);
 }
 
 /* Site Navigation */
-.nav {
+.nav {}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    color: var(--dark);
 }
 
 .nav-link:hover,
 .nav-link:focus,
 .nav-link.current {
-    color: var(--accent);
+    color: var(--pressed);
+}
+
+.address {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.address-link {
+    color: var(--subtle-text);
+}
+
+.address-link:hover,
+.address-link:focus,
+.address-link.current {
+    color: var(--pressed)
 }
 
 /* ----------------MAIN------------------ */
 .hero {
     background: var(--hero-background);
-    color: var(--text-color)
+    color: var(--slogan-color)
 }
 
+/* Header 1 */
 .hero-title {
-    font-size: ;
-    font-weight: ;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
 }
 
 /* Hero Button */
@@ -105,12 +125,43 @@ a {
     background: var(--pressed);
 }
 
+/* Header 2 */
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--dark);
+}
+
+/* Header 3 */
+h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--dark);
+}
+
+li {
+    list-style-type: none;
+}
+
 /* ----------------FOOTER------------------ */
 .footer {
-    background-color: ;
-    color: ;
+    background-color: var(--dark);
 }
 
 .footer .logo-studio {
     color: var(--light);
+}
+
+.footer-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--accent);
 }
