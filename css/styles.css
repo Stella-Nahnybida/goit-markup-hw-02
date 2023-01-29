@@ -1,37 +1,48 @@
-/* Colors */
+/* Color Scheme
+IRIS  #4D5AE5; Primary Brand (CTAs Focused Active states Links)
+OCEAN : #404BBF; Pressed state (CTAs)
+NAVI BLUE : #2E2F42; Dark (Overlays Shadows Headings)
+GREEN : #31D0AA; Success (Valid fields Success messages)
+SLATE : #434455; Body text
+LIGHT SLATE : #8E8F99; Subtle Text (Helper text Deemphasized text)
+CORNFLOWER : #E7E9FC; Accent (Accent color Hairlines Subtle backgrounds)
+CLOUD : #F4F4FD; light (Light mode backgrounds Light mode Dialogs/alerts)
+NAVY BLUE : #2E2F42; Modal overlay
+GREY : #2E2F42; Hero background (Hero image background)
+*/
+
 :root {
-    /* IRIS */
-    --primary-brand: #4D5AE5;
-    /* OCEAN */
-    --pressed: #404BBF;
-    /* NAVI BLUE */
-    --dark: #2E2F42;
-    /* GREEN */
-    --success: #31D0AA;
-    /* SLATE */
-    --text: #434455;
-    /* LIGHT SLATE */
+    --main-text: #434455;
+    --main-bg: #fff;
     --subtle-text: #8E8F99;
-    /* CORNFLOWER */
+    --heading: #2E2F42;
+    --light-bg: #F4F4FD;
     --accent: #E7E9FC;
-    /* CLOUD */
-    --light: #F4F4FD;
-    /* NAVY BLUE modal */
-    --modal-overlay: #2E2F42;
-    /* GREY */
-    --hero-background: #2E2F42;
-    /* WHITE */
-    --slogan-color: #ffffff;
+    --brand: #4D5AE5;
+    --pressed: #404BBF;
+    --hero-bg: rgba(46, 47, 66, 0.7);
+    --overlay: rgba(46, 47, 66, 0.4);
+    --success: #31D0AA;
+    --shadow: rgba(0, 0, 0, 0.15)
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--subtle-text);
-    /*background-color: #ffffff;*/
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    color: var(--main-text);
+    background: var(--main-bg);
 }
 
-a {
+.link {
     text-decoration: none;
+}
+
+.list {
+    list-style: none;
 }
 
 /* Hidden header pattern */
@@ -49,7 +60,6 @@ a {
 }
 
 /* ----------------HEADER------------------ */
-.header {}
 
 /* Site Logo */
 .logo {
@@ -59,65 +69,59 @@ a {
     line-height: 1.33;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--primary-brand);
+    color: var(--brand);
 }
 
 .header .logo-studio {
-    color: var(--dark);
+    color: var(--heading);
 }
 
 /* Site Navigation */
-.nav {}
-
-.nav-link {
+.nav .link {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--dark);
+    color: var(--heading);
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.nav-link.current {
+.nav .link:hover,
+.nav .link:focus,
+.nav .link.current {
     color: var(--pressed);
 }
 
-.address {
+.address .link {
     font-style: normal;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    color: var(--main-text);
+
 }
 
-.address-link {
-    color: var(--subtle-text);
-}
-
-.address-link:hover,
-.address-link:focus,
-.address-link.current {
+.address .link:hover,
+.address .link:focus,
+.address .link.current {
     color: var(--pressed)
 }
 
 /* ----------------MAIN------------------ */
 .hero {
-    background: var(--hero-background);
-    color: var(--slogan-color)
+    background: var(--heading);
 }
 
-/* Header 1 */
+/* Hero Title */
 .hero-title {
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
-    letter-spacing: 0.02em;
+    color: var(--main-bg);
 }
 
 /* Hero Button */
 .hero-button {
     font-family: inherit;
-    background: var(--primary-brand);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--main-bg);
+    background: var(--brand);
+    box-shadow: 0px 4px 4px var(--shadow);
+    border-radius: 4px;
 }
 
 .hero-button:hover,
@@ -125,63 +129,50 @@ a {
     background: var(--pressed);
 }
 
-/* Header 2 */
-h2 {
+/* Section */
+.section-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
-    letter-spacing: 0.02em;
     text-transform: capitalize;
-    color: var(--dark);
+    color: var(--heading);
 }
 
 /* Header 3 */
-h3 {
-    font-family: 'Roboto';
-    font-style: normal;
+.title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--dark);
+    color: var(--heading);
 }
 
-li {
-    list-style-type: none;
-}
-
-/* List of Buttons */
-.filters {}
-
+/* List of Filters Buttons */
 .filter button {
-    /* Button Text */
-    font-weight: 500;
+    font-family: inherit;
     font-size: 16px;
-    line-height: 1.5;
-    display: flex;
-    align-items: center;
+    font-weight: 500;
     text-align: center;
     letter-spacing: 0.04em;
-    background: var(--light);
+    background: var(--light-bg);
     border: 1px solid var(--accent);
     border-radius: 4px;
-    color: var(--primary-brand);
+    color: var(--brand);
 }
 
 .filter button:hover,
 .filter button:focus,
 .filter button.current {
     background: var(--pressed);
-    color: var(--slogan-color);
+    color: var(--main-bg);
 }
 
 /* ----------------FOOTER------------------ */
 .footer {
-    background-color: var(--dark);
+    background-color: var(--heading);
 }
 
 .footer .logo-studio {
-    color: var(--light);
+    color: var(--light-bg);
 }
 
 .footer-text {
