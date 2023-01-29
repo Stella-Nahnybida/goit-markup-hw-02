@@ -27,7 +27,7 @@ GREY : #2E2F42; Hero background (Hero image background)
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Open sans', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -43,6 +43,10 @@ body {
 
 .list {
     list-style: none;
+}
+
+.button {
+    cursor: pointer;
 }
 
 /* Hidden header pattern */
@@ -90,7 +94,8 @@ body {
 
 .address .link {
     font-style: normal;
-    color: var(--main-text);
+    color: currentColor;
+    /* color: var(--main-text); */
 
 }
 
@@ -114,7 +119,7 @@ body {
 }
 
 /* Hero Button */
-.hero-button {
+.hero .button {
     font-family: inherit;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -130,6 +135,14 @@ body {
 }
 
 /* Section */
+.section {
+    background-color: var(--main-bg);
+}
+
+.section.team {
+    background-color: var(--light-bg);
+}
+
 .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -146,8 +159,12 @@ body {
     color: var(--heading);
 }
 
+.member {
+    background-color: var(--main-bg);
+}
+
 /* List of Filters Buttons */
-.filter button {
+.filter .button {
     font-family: inherit;
     font-size: 16px;
     font-weight: 500;
@@ -159,9 +176,9 @@ body {
     color: var(--brand);
 }
 
-.filter button:hover,
-.filter button:focus,
-.filter button.current {
+.filter .button:hover,
+.filter .button:focus,
+.filter .button.current {
     background: var(--pressed);
     color: var(--main-bg);
 }
